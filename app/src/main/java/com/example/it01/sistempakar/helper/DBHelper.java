@@ -25,8 +25,6 @@ public class DBHelper extends SQLiteOpenHelper{
         String sql = "create table user(id integer primary key autoincrement not null, username varchar(50) not null, password varchar(50) not null)";
         Log.d(TAG, "onCreate: "+sql);
         sqLiteDatabase.execSQL(sql);
-//        String sql1 = "insert into user(username, password) values('miko', 'miko')";
-//        sqLiteDatabase.execSQL(sql1);
 
     }
 

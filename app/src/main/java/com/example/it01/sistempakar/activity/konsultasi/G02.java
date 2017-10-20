@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.it01.sistempakar.R;
 
-public class Konsultasi02 extends AppCompatActivity {
+public class G02 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

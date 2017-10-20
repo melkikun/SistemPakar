@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.it01.sistempakar.R;
+import com.example.it01.sistempakar.activity.konsultasi.G01;
 import com.example.it01.sistempakar.adapter.MainMenuAdapter;
 
 import java.util.ArrayList;
@@ -64,7 +65,7 @@ public class Dashboard extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i){
                     case 0:
-
+                        startActivity(new Intent(getApplicationContext(), G01.class));
                         break;
                     case 1:
                         startActivity(new Intent(getApplicationContext(), Petunjuk.class));
@@ -73,6 +74,8 @@ public class Dashboard extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), About.class));
                         break;
                     case 3:
+                        break;
+                    case 4:
                         logOut();
                         break;
                     default:

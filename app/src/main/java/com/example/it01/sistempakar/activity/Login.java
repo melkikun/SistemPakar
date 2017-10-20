@@ -49,11 +49,6 @@ public class Login extends AppCompatActivity {
             }
         });
         sharedPreferences = getApplicationContext().getSharedPreferences(getResources().getString(R.string.app_preferences), Context.MODE_PRIVATE);
-        if (!sharedPreferences.contains("username")) {
-            Toast.makeText(getApplicationContext(), "tidak ada session", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(getApplicationContext(), "ada session", Toast.LENGTH_LONG).show();
-        }
         dataSource = new DBDataSource(this);
         dataSource.open();
     }
@@ -62,16 +57,22 @@ public class Login extends AppCompatActivity {
     public void login() {
         String un = username.getText().toString();
         String pwd = password.getText().toString();
-        List<User> users = dataSource.loginUser(un, pwd);
-        if (users.size() > 0) {
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("username", un);
-            editor.putString("password", pwd);
-            editor.commit();
-            Intent intent = new Intent(this, Dashboard.class);
-            startActivity(intent);
+        if (un == "") {
+            Toast.makeText(getApplicationContext(), "username tidak boleh kosong", Toast.LENGTH_LONG).show();
+        } else if (pwd == "") {
+            Toast.makeText(getApplicationContext(), "password tidak boleh kosong", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(getApplicationContext(), "username dan password tidak sesuai", Toast.LENGTH_LONG).show();
+            List<User> users = dataSource.loginUser(un, pwd);
+            if (users.size() > 0) {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("username", un);
+                editor.putString("password", pwd);
+                editor.commit();
+                Intent intent = new Intent(this, Dashboard.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(getApplicationContext(), "username dan password tidak sesuai", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
