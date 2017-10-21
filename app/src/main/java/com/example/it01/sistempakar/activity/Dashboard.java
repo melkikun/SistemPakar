@@ -1,8 +1,10 @@
 package com.example.it01.sistempakar.activity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
@@ -33,6 +35,7 @@ public class Dashboard extends AppCompatActivity {
     @BindView(R.id.grid_view)
     GridView grid_view;
     SharedPreferences sharedPreferences;
+    SharedPreferences sharedPreferences2;
     private final String TAG = getClass().getSimpleName();
 
     @Override
@@ -43,7 +46,8 @@ public class Dashboard extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("DashBoard");
         sharedPreferences = getSharedPreferences(getResources().getString(R.string.app_preferences), Context.MODE_PRIVATE);
-        if(!sharedPreferences.contains("username")){
+        sharedPreferences2 = getSharedPreferences(getResources().getString(R.string.app_pertanyaan), Context.MODE_PRIVATE);
+        if (!sharedPreferences.contains("username")) {
             startActivity(new Intent(this, Login.class));
         }
         List<Integer> x = new ArrayList<>();
@@ -63,9 +67,33 @@ public class Dashboard extends AppCompatActivity {
         grid_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i){
+                switch (i) {
                     case 0:
-                        startActivity(new Intent(getApplicationContext(), G01.class));
+                        AlertDialog.Builder builder = new AlertDialog.Builder(Dashboard.this);
+
+                        builder.setTitle("Konsultasi");
+                        builder.setMessage("Apa anda yakin?");
+
+                        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+
+                            public void onClick(DialogInterface dialog, int which) {
+                                sharedPreferences2.edit().clear().commit();
+                                dialog.dismiss();
+                                startActivity(new Intent(getApplicationContext(), G01.class));
+                            }
+                        });
+
+                        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // Do nothing
+                                dialog.dismiss();
+                            }
+                        });
+
+                        AlertDialog alert = builder.create();
+                        alert.show();
                         break;
                     case 1:
                         startActivity(new Intent(getApplicationContext(), Petunjuk.class));
@@ -109,9 +137,9 @@ public class Dashboard extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.logout:
-                    logOut();
+                logOut();
                 break;
             default:
                 break;
@@ -119,7 +147,7 @@ public class Dashboard extends AppCompatActivity {
         return true;
     }
 
-    public void logOut(){
+    public void logOut() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.remove("username");
         editor.remove("password");

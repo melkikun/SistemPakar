@@ -18,15 +18,15 @@ import butterknife.OnClick;
 
 public class G02 extends AppCompatActivity {
     @BindView(R.id.toolbar)
-    SharedPreferences sharedPreferences;
     Toolbar toolbar;
-//    @BindView(R.id.radio)
-//    RadioGroup radioGroup;
-//    @BindView(R.id.ya)
-//    RadioButton ya;
-//    @BindView(R.id.tidak)
-//    RadioButton tidak;
-//    RadioButton choosen;
+    SharedPreferences sharedPreferences;
+    @BindView(R.id.radio)
+    RadioGroup radioGroup;
+    @BindView(R.id.ya)
+    RadioButton ya;
+    @BindView(R.id.tidak)
+    RadioButton tidak;
+    RadioButton choosen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +37,17 @@ public class G02 extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-//        sharedPreferences = getApplicationContext().getSharedPreferences(getResources().getString(R.string.app_pertanyaan), Context.MODE_PRIVATE);
+        sharedPreferences = getApplicationContext().getSharedPreferences(getResources().getString(R.string.app_pertanyaan), Context.MODE_PRIVATE);
+        if(sharedPreferences.contains("G02")){
+            int data = sharedPreferences.getInt("G02", 0);
+            if(data == 1){
+                ya.setChecked(true);
+            }else{
+                tidak.setChecked(false);
+            }
+        }else{
+            tidak.setChecked(true);
+        }
     }
 
     @Override
@@ -51,19 +61,29 @@ public class G02 extends AppCompatActivity {
 
     @OnClick(R.id.lanjut)
     public void lanjut(){
-//        SharedPreferences.Editor editor = sharedPreferences.edit();
-//        choosen = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-//        String value = choosen.getText().toString();
-//        if(value.equalsIgnoreCase("ya")){
-//            editor.putInt("G02", 1);
-//        }else{
-//            editor.putInt("G03", 0);
-//        }
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        choosen = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
+        String value = choosen.getText().toString();
+        if(value.equalsIgnoreCase("ya")){
+            editor.putInt("G02", 1);
+        }else{
+            editor.putInt("G02", 0);
+        }
+        editor.commit();
         startActivity(new Intent(this, Kesimpulan.class));
     }
 
     @OnClick(R.id.kembali)
     public void kembali(){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        choosen = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
+        String value = choosen.getText().toString();
+        if(value.equalsIgnoreCase("ya")){
+            editor.putInt("G02", 1);
+        }else{
+            editor.putInt("G02", 0);
+        }
+        editor.commit();
         finish();
     }
 }
