@@ -57,11 +57,7 @@ public class Login extends AppCompatActivity {
     public void login() {
         String un = username.getText().toString();
         String pwd = password.getText().toString();
-        if (un == "") {
-            Toast.makeText(getApplicationContext(), "username tidak boleh kosong", Toast.LENGTH_LONG).show();
-        } else if (pwd == "") {
-            Toast.makeText(getApplicationContext(), "password tidak boleh kosong", Toast.LENGTH_LONG).show();
-        } else {
+        if (!un.trim().equals("") && !pwd.trim().equals("")) {
             List<User> users = dataSource.loginUser(un, pwd);
             if (users.size() > 0) {
                 SharedPreferences.Editor editor = sharedPreferences.edit();

@@ -66,28 +66,22 @@ public class Dashboard extends AppCompatActivity {
                 switch (i) {
                     case 0:
                         AlertDialog.Builder builder = new AlertDialog.Builder(Dashboard.this);
-
                         builder.setTitle("Konsultasi");
                         builder.setMessage("Apa anda yakin?");
-
                         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-
                             public void onClick(DialogInterface dialog, int which) {
                                 sharedPreferences2.edit().clear().commit();
                                 dialog.dismiss();
                                 startActivity(new Intent(getApplicationContext(), G01.class));
                             }
                         });
-
                         builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 // Do nothing
                                 dialog.dismiss();
                             }
                         });
-
                         AlertDialog alert = builder.create();
                         alert.show();
                         break;
