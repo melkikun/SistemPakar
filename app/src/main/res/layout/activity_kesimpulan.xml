@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.it01.sistempakar.activity.konsultasi.Kesimpulan"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix"
+    >
     <include layout="@layout/activity_toolbar"/>
     <TextView
         android:layout_width="match_parent"
@@ -12,10 +14,19 @@
         android:text="Kesimpulan yang didapat adalah sebagai berikut"
         android:textAlignment="center"
         android:id="@+id/judul"
+        fontPath="fonts/art_rewery.ttf"
         />
-    <ListView
+    <Button
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
-        android:id="@+id/list_view"></ListView>
+        android:text="Selesai"
+        android:id="@+id/selesai"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="simpan"
+        android:id="@+id/simpan"
+        />
 </LinearLayout>

@@ -4,18 +4,15 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.it01.sistempakar.R;
@@ -27,7 +24,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class Dashboard extends AppCompatActivity {
     @BindView(R.id.toolbar)
@@ -37,7 +33,7 @@ public class Dashboard extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     SharedPreferences sharedPreferences2;
     private final String TAG = getClass().getSimpleName();
-
+    private int key = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,10 +116,18 @@ public class Dashboard extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_HOME);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+//        Intent intent = new Intent(Intent.ACTION_MAIN);
+//        intent.addCategory(Intent.CATEGORY_HOME);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        startActivity(intent);
+
+        if(key == 1){
+            key =0;
+            finish();
+        }else{
+            Toast.makeText(getApplicationContext(), "press back Button again to exit", Toast.LENGTH_SHORT).show();
+            key++;
+        }
     }
 
     @Override
@@ -156,7 +160,6 @@ public class Dashboard extends AppCompatActivity {
         startActivity(intent);
     }
 }
-
 
 
 
