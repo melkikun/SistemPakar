@@ -5,14 +5,17 @@
     android:layout_height="match_parent"
     tools:context="com.example.it01.sistempakar.activity.konsultasi.Kesimpulan"
     android:orientation="vertical">
+    <include layout="@layout/activity_toolbar"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/g01"
+        android:text="Kesimpulan yang didapat adalah sebagai berikut"
+        android:textAlignment="center"
+        android:id="@+id/judul"
         />
-    <TextView
+    <ListView
         android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
-        android:id="@+id/g02"
-        />
+        android:id="@+id/list_view"></ListView>
 </LinearLayout>
