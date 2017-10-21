@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Sistem Pakar</string>
     <string name="app_preferences">preferences</string>
+    <string name="app_pertanyaan">pertanyaan</string>
 </resources>
