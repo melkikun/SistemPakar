@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -34,10 +35,10 @@ public class G01 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kosultasi01);
+        setContentView(R.layout.activity_g01);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Pertanyaan Pertama");
+        getSupportActionBar().setTitle("Pertanyaan 1");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         sharedPreferences = getApplicationContext().getSharedPreferences(getResources().getString(R.string.app_pertanyaan), Context.MODE_PRIVATE);
@@ -46,7 +47,7 @@ public class G01 extends AppCompatActivity {
             if(data == 1){
                 ya.setChecked(true);
             }else{
-                tidak.setChecked(false);
+                tidak.setChecked(true);
             }
         }else{
             tidak.setChecked(true);
@@ -59,6 +60,11 @@ public class G01 extends AppCompatActivity {
             case android.R.id.home:
                 dialogBack();
                 break;
+            case R.id.selesai:
+                startActivity(new Intent(getApplicationContext(), Kesimpulan.class));
+                break;
+            case R.id.utama:
+                dialogBack();
         }
         return true;
     }
@@ -110,5 +116,11 @@ public class G01 extends AppCompatActivity {
 
         AlertDialog alert = builder.create();
         alert.show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.diagnosa_menu, menu);
+        return true;
     }
 }

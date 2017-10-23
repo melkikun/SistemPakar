@@ -1,16 +1,20 @@
 package com.example.it01.sistempakar.activity.konsultasi;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.it01.sistempakar.R;
+import com.example.it01.sistempakar.activity.Dashboard;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,10 +34,10 @@ public class G02 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_konsultasi02);
+        setContentView(R.layout.activity_g02);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Pertanyaan Kedua");
+        getSupportActionBar().setTitle("Pertanyaan 2");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -43,7 +47,7 @@ public class G02 extends AppCompatActivity {
             if(data == 1){
                 ya.setChecked(true);
             }else{
-                tidak.setChecked(false);
+                tidak.setChecked(true);
             }
         }else{
             tidak.setChecked(true);
@@ -55,6 +59,33 @@ public class G02 extends AppCompatActivity {
         switch (item.getItemId()){
             case android.R.id.home:
                 finish();
+            case R.id.utama:
+                AlertDialog.Builder builder = new AlertDialog.Builder(G02.this);
+
+                builder.setTitle("Konsultasi");
+                builder.setMessage("Apa anda yakin kembali, data anda akan hilang?");
+
+                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        startActivity(new Intent(getApplicationContext(), Dashboard.class));
+                    }
+                });
+
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do nothing
+                        dialog.dismiss();
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
+                break;
+            case R.id.selesai:
+                startActivity(new Intent(getApplicationContext(), Kesimpulan.class));
+                break;
         }
         return true;
     }
@@ -70,7 +101,7 @@ public class G02 extends AppCompatActivity {
             editor.putInt("G02", 0);
         }
         editor.commit();
-        startActivity(new Intent(this, Kesimpulan.class));
+        startActivity(new Intent(this, G03.class));
     }
 
     @OnClick(R.id.kembali)
@@ -85,5 +116,11 @@ public class G02 extends AppCompatActivity {
         }
         editor.commit();
         finish();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.diagnosa_menu, menu);
+        return true;
     }
 }

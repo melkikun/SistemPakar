@@ -50,13 +50,13 @@ public class Dashboard extends AppCompatActivity {
         x.add(R.drawable.diagnose);
         x.add(R.drawable.petunjuk);
         x.add(R.drawable.user);
-        x.add(R.drawable.history);
+//        x.add(R.drawable.history);
         x.add(R.drawable.logout);
         List<String> y = new ArrayList<>();
         y.add("Diagnosa");
         y.add("Petunjuk");
         y.add("Tentang");
-        y.add("History");
+//        y.add("History");
         y.add("Logout");
         MainMenuAdapter mainMenuAdapter = new MainMenuAdapter(getApplicationContext(), x, y);
         grid_view.setAdapter(mainMenuAdapter);
@@ -91,9 +91,9 @@ public class Dashboard extends AppCompatActivity {
                     case 2:
                         startActivity(new Intent(getApplicationContext(), About.class));
                         break;
+//                    case 3:
+//                        break;
                     case 3:
-                        break;
-                    case 4:
                         logOut();
                         break;
                     default:

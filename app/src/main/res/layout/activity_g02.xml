@@ -50,6 +50,8 @@
                 android:text="Kembali"
                 android:id="@+id/kembali"
                 android:layout_weight="1"
+                android:background="#F2AE2D"
+                android:layout_marginRight="10dp"
                 />
             <Button
                 android:layout_width="wrap_content"
@@ -57,6 +59,8 @@
                 android:text="Lanjut"
                 android:id="@+id/lanjut"
                 android:layout_weight="1"
+                android:background="#A60303"
+                android:layout_marginLeft="10dp"
                 />
         </LinearLayout>
     </LinearLayout>
