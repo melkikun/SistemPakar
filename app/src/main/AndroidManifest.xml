@@ -25,7 +25,8 @@
         <activity android:name=".activity.About" />
         <activity android:name=".activity.Petunjuk" />
         <activity android:name=".activity.konsultasi.ToolbarActivity" />
-        <activity android:name=".activity.konsultasi.Kesimpulan"></activity>
+        <activity android:name=".activity.konsultasi.Kesimpulan" />
+        <activity android:name=".activity.konsultasi.G03"></activity>
     </application>
 
 </manifest>
