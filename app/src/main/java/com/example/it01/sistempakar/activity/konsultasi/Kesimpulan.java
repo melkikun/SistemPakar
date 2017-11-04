@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,7 +49,7 @@ public class Kesimpulan extends AppCompatActivity {
         ButterKnife.bind(this);
 
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/art_rewery.ttf")
+                .setDefaultFontPath("fonts/delius_regular.ttf")
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         );
@@ -136,6 +137,8 @@ public class Kesimpulan extends AppCompatActivity {
             penyakit = "Gastro Entritis";
         } else if (gejala1 == 1 && gejala11 == 1 && gejala12 == 1 && gejala18 == 1 && gejala15 == 1 && gejala16 == 1 && gejala17 == 1 && gejala6 == 1) {
             penyakit = "Rotaviurus";
+        }else {
+            penyakit = "Penyakit Tidak Ditemukan";
         }
 
         KesimpulanAdapter adapter = new KesimpulanAdapter(getApplicationContext(), gejala, hasil);
@@ -153,7 +156,7 @@ public class Kesimpulan extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                startActivity(new Intent(getApplicationContext(), G19.class));
+                startActivity(new Intent(getApplicationContext(), G20.class));
                 break;
             case R.id.utama:
                 AlertDialog.Builder builder = new AlertDialog.Builder(Kesimpulan.this);
@@ -188,4 +191,5 @@ public class Kesimpulan extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.finsih_menu, menu);
         return true;
     }
+
 }

@@ -18,13 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.Login" />
-        <activity android:name=".activity.Register" />
         <activity android:name=".activity.konsultasi.G01" />
         <activity android:name=".activity.konsultasi.G02" />
         <activity android:name=".activity.About" />
         <activity android:name=".activity.Petunjuk" />
-        <activity android:name=".activity.konsultasi.ToolbarActivity" />
         <activity android:name=".activity.konsultasi.Kesimpulan" />
         <activity android:name=".activity.konsultasi.G03"></activity>
         <activity android:name=".activity.konsultasi.G04"></activity>

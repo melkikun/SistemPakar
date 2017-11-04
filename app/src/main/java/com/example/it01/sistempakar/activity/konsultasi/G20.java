@@ -137,7 +137,7 @@ public class G20 extends AppCompatActivity {
             editor.putInt("G20", 0);
         }
         editor.commit();
-        finish();
+        startActivity(new Intent(this, G19.class));
     }
 
     @Override

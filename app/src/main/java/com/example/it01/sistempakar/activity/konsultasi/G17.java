@@ -115,7 +115,7 @@ public class G17 extends AppCompatActivity {
             editor.putInt("G17", 0);
         }
         editor.commit();
-        finish();
+        startActivity(new Intent(this, G16.class));
     }
 
     @Override

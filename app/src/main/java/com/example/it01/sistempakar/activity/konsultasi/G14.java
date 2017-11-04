@@ -105,17 +105,17 @@ public class G14 extends AppCompatActivity {
     }
 
     @OnClick(R.id.kembali)
-    public void kembali(){
+    public void kembali() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         choosen = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
         String value = choosen.getText().toString();
-        if(value.equalsIgnoreCase("ya")){
+        if (value.equalsIgnoreCase("ya")) {
             editor.putInt("G14", 1);
-        }else{
+        } else {
             editor.putInt("G14", 0);
         }
         editor.commit();
-        finish();
+        startActivity(new Intent(this, G13.class));
     }
 
     @Override

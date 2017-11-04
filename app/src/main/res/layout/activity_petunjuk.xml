@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.it01.sistempakar.activity.Petunjuk">
+    tools:context="com.example.it01.sistempakar.activity.Petunjuk"
+    android:background="#009812"
+    android:orientation="vertical">
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,4 +15,10 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
         android:id="@+id/toolbar"
         ></android.support.v7.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="\n\n\n\n\nHalaman ini berisi tentang petunjuk untuk menjalankan program\n\n\n\n\n\n\n\nComing Soon...."
+        />
 </LinearLayout>

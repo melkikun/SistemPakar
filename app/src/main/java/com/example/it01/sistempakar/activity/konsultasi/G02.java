@@ -31,6 +31,7 @@ public class G02 extends AppCompatActivity {
     @BindView(R.id.tidak)
     RadioButton tidak;
     RadioButton choosen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,21 +43,21 @@ public class G02 extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         sharedPreferences = getApplicationContext().getSharedPreferences(getResources().getString(R.string.app_pertanyaan), Context.MODE_PRIVATE);
-        if(sharedPreferences.contains("G02")){
+        if (sharedPreferences.contains("G02")) {
             int data = sharedPreferences.getInt("G02", 0);
-            if(data == 1){
+            if (data == 1) {
                 ya.setChecked(true);
-            }else{
+            } else {
                 tidak.setChecked(true);
             }
-        }else{
+        } else {
             tidak.setChecked(true);
         }
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
             case R.id.utama:
@@ -91,13 +92,13 @@ public class G02 extends AppCompatActivity {
     }
 
     @OnClick(R.id.lanjut)
-    public void lanjut(){
+    public void lanjut() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         choosen = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
         String value = choosen.getText().toString();
-        if(value.equalsIgnoreCase("ya")){
+        if (value.equalsIgnoreCase("ya")) {
             editor.putInt("G02", 1);
-        }else{
+        } else {
             editor.putInt("G02", 0);
         }
         editor.commit();
@@ -105,17 +106,17 @@ public class G02 extends AppCompatActivity {
     }
 
     @OnClick(R.id.kembali)
-    public void kembali(){
+    public void kembali() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         choosen = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
         String value = choosen.getText().toString();
-        if(value.equalsIgnoreCase("ya")){
+        if (value.equalsIgnoreCase("ya")) {
             editor.putInt("G02", 1);
-        }else{
+        } else {
             editor.putInt("G02", 0);
         }
         editor.commit();
-        finish();
+        startActivity(new Intent(this, G01.class));
     }
 
     @Override

@@ -115,7 +115,7 @@ public class G03 extends AppCompatActivity {
             editor.putInt("G03", 0);
         }
         editor.commit();
-        finish();
+        startActivity(new Intent(this, G02.class));
     }
 
     @Override

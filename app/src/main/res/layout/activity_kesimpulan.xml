@@ -11,10 +11,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kesimpulan yang didapat adalah sebagai berikut"
+        android:text="Kesimpulan yang didapat adalah sebagai berikut : "
         android:textAlignment="center"
         android:id="@+id/judul"
-        fontPath="fonts/art_rewery.ttf"
+        fontPath="fonts/delius_regular.ttf"
+        android:textColor="#7B2A3B"
         />
     <ListView
         android:layout_width="match_parent"
@@ -29,6 +30,8 @@
         android:text="Kesimpulan"
         android:fontFamily="monospace"
         android:id="@+id/kesimpulan_akhir"
-        fontPath="fonts/art_rewery.ttf"
+        fontPath="fonts/delius_regular.ttf"
+        android:textColor="#7B2A3B"
+        android:textStyle="italic|bold"
         />
 </LinearLayout>
