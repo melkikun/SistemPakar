@@ -137,7 +137,7 @@ public class Kesimpulan extends AppCompatActivity {
             penyakit = "Gastro Entritis";
         } else if (gejala1 == 1 && gejala11 == 1 && gejala12 == 1 && gejala18 == 1 && gejala15 == 1 && gejala16 == 1 && gejala17 == 1 && gejala6 == 1) {
             penyakit = "Rotaviurus";
-        }else {
+        } else {
             penyakit = "Penyakit Tidak Ditemukan";
         }
 
@@ -156,31 +156,10 @@ public class Kesimpulan extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                startActivity(new Intent(getApplicationContext(), G20.class));
+                kembaliKeHome();
                 break;
             case R.id.utama:
-                AlertDialog.Builder builder = new AlertDialog.Builder(Kesimpulan.this);
-
-                builder.setTitle("Konsultasi");
-                builder.setMessage("Apa anda yakin kembali, data anda akan hilang?");
-
-                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                        startActivity(new Intent(getApplicationContext(), Dashboard.class));
-                    }
-                });
-
-                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Do nothing
-                        dialog.dismiss();
-                    }
-                });
-
-                AlertDialog alert = builder.create();
-                alert.show();
+                kembaliKeHome();
                 break;
         }
         return true;
@@ -192,4 +171,33 @@ public class Kesimpulan extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public void onBackPressed() {
+        kembaliKeHome();
+    }
+
+    public void kembaliKeHome() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Kesimpulan.this);
+
+        builder.setTitle("Konsultasi");
+        builder.setMessage("Apa anda yakin kembali, data anda akan hilang?");
+
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                startActivity(new Intent(getApplicationContext(), Dashboard.class));
+            }
+        });
+
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Do nothing
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 }

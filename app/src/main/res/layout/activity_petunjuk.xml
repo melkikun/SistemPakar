@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.it01.sistempakar.activity.Petunjuk"
-    android:background="#009812"
     android:orientation="vertical">
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -16,9 +15,19 @@
         android:id="@+id/toolbar"
         ></android.support.v7.widget.Toolbar>
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Petunjuk Penggunaan Program "
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#0A1829"
+        android:textAlignment="center"
+        />
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="\n\n\n\n\nHalaman ini berisi tentang petunjuk untuk menjalankan program\n\n\n\n\n\n\n\nComing Soon...."
+        android:layout_marginTop="10dp"
+        android:textColor="#0A1829"
+        android:text="Aplikasi ini merupakan aplikasi yang digunakan untuk melakukan diagnosa penyakit perut menggunakan metode forward chaining.Aplikasi ini terdiri dari 20 pertanyaan. Di setiap pertanyaan anda diwajibkan untuk memilih ya atau tidak. jika anda rasa sudah selesai dengan pertanyaan tersebut maka anda bisa klik selesai pada pojok kanan atas program. Otomatis anda anda diarahkan ke halaman kesimpulan. Kesimpulan penyakit akan muncul sesui dengan gejala yang anda pilih. "
         />
 </LinearLayout>
