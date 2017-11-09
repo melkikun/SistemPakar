@@ -82,6 +82,7 @@ public class G01 extends AppCompatActivity {
                 //langsung ke halaman selesai
                 startActivity(new Intent(getApplicationContext(), Kesimpulan.class));
                 break;
+                //kembali ke halaman utama
             case R.id.utama:
                 dialogBack();
         }
@@ -121,18 +122,21 @@ public class G01 extends AppCompatActivity {
 
     //konfirmasi ke halaman home
     public void dialogBack(){
+        //dialog / popup untuk konfirmasi
         AlertDialog.Builder builder = new AlertDialog.Builder(G01.this);
-
+        //judul dialog / pop up
         builder.setTitle("Konsultasi");
+        // pesan konfirmasi pada pop up
         builder.setMessage("Apa anda yakin kembali, data anda akan hilang?");
 
+        //tombol yes
         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
                 startActivity(new Intent(getApplicationContext(), Dashboard.class));
             }
         });
-
+        //tombol no
         builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -141,7 +145,9 @@ public class G01 extends AppCompatActivity {
             }
         });
 
+        //membuat object alert dari pop up/alert dialog
         AlertDialog alert = builder.create();
+        //menampilkan pop up
         alert.show();
     }
 
