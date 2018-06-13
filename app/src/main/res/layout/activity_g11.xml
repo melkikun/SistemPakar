@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Apakah anda mengalami diare bercampur darah dan bersifat kambuhan?"
+            android:text="Apakah Anda Mengalami BAB Cair Lebih Dari 3x?"
             android:textStyle="bold"
             android:textColor="#000"
             />

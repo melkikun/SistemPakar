@@ -95,6 +95,7 @@ public class Kesimpulan extends AppCompatActivity {
         int gejala18 = sharedPreferences.getInt("G18", 9999);//mengambil data dari gejala 1 berisi 0 atau 18(0 tidak, 1 ya)
         int gejala19 = sharedPreferences.getInt("G19", 9999);//mengambil data dari gejala 1 berisi 0 atau 19(0 tidak, 1 ya)
         int gejala20 = sharedPreferences.getInt("G20", 9999);//mengambil data dari gejala 1 berisi 0 atau 20(0 tidak, 1 ya)
+        int gejala21 = sharedPreferences.getInt("G21", 9999);//mengambil data dari gejala 1 berisi 0 atau 20(0 tidak, 1 ya)
 
         //inisialisasi list yang ada pada baris 49 dijadikan array list
         hasil = new ArrayList<>();
@@ -118,28 +119,30 @@ public class Kesimpulan extends AppCompatActivity {
         hasil.add(gejala18);//menampung variiabel gejala 18 ke dalam list
         hasil.add(gejala19);//menampung variiabel gejala 19 ke dalam list
         hasil.add(gejala20);//menampung variiabel gejala 20 ke dalam list
+        hasil.add(gejala21);//menampung variiabel gejala 20 ke dalam list
 
         gejala = new HashMap<>(); //inisialisasi hash map berisi kode gejala dan nama gejala yang ada pada baris 49 dijadikan array list
-        gejala.put("G1", "mual"); //kode gejala G1 bernama mual
-        gejala.put("G2", "demam menggigil"); //sama seperti kode gejala G1
-        gejala.put("G3", "kehilangan selera makan");
-        gejala.put("G4", "diare");
-        gejala.put("G5", "mengalami kejang2");
-        gejala.put("G6", "pandangan kabur");
-        gejala.put("G7", "sakit perut");
-        gejala.put("G8", "sakit kepala");
-        gejala.put("G9", "pendarahan pada anus");
-        gejala.put("G10", "penurunan berat badan");
-        gejala.put("G11", "diare bercampur darah dan bersifat kambuhan");
-        gejala.put("G12", "kelelahan");
-        gejala.put("G13", "peru kram");
-        gejala.put("G14", "demam diatas 40 derajat celcius");
-        gejala.put("G15", "tidak buang air selama 12 jam atau lebih");
-        gejala.put("G16", "selalu merasa haus berlebihan");
-        gejala.put("G17", "mata menjadi cekung");
-        gejala.put("G18", "kulit yang kering atau dingin");
-        gejala.put("G19", "demam");
-        gejala.put("G20", "sakit otot");
+        gejala.put("G1", "Mual"); //kode gejala G1 bernama mual
+        gejala.put("G2", "Muntah"); //sama seperti kode gejala G1
+        gejala.put("G3", "Nyeri Perut");
+        gejala.put("G4", "Diare");
+        gejala.put("G5", "Mengalami Sesak Nafas");
+        gejala.put("G6", "Tensi Menurun");
+        gejala.put("G7", "Pusing");
+        gejala.put("G8", "Sakit Perut");
+        gejala.put("G9", "Sakit Kepala");
+        gejala.put("G10", "Kehilangan Selera Makan");
+        gejala.put("G11", "BAB Cair Lebih dari 3x");
+        gejala.put("G12", "Diare Bercampur Darah");
+        gejala.put("G13", "Panas");
+        gejala.put("G14", "Kelelahan");
+        gejala.put("G15", "Perut Kram");
+        gejala.put("G16", "Penurunan Berat Badan");
+        gejala.put("G17", "Sakit Otot");
+        gejala.put("G18", "Kulit Kering atau Dingin");
+        gejala.put("G19", "Tidak Buang Air Kecil 12 Jam");
+        gejala.put("G20", "Selalu Merasa Haus");
+        gejala.put("G21", "Mata Menjadi Cekung");
 
         //PENGECEKAN UTAMA DARI GEJALA YANG TELAH DI PILIH DARI PERTANYAAN 1 SAMPAI DENGAN 20 DAN HASILNYA AKAN DI TAMPUNG DI VARIABEL PENYAKIT
         //jika gejala 1 ya dan gejala 2 ya dan gejala 3 ya dan gejala 4 ya dan gejala 5 ya dan gejala 6 ya makan hasilnya addalah keracunan makanan

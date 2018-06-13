@@ -23,24 +23,25 @@
         <activity android:name=".activity.About" />
         <activity android:name=".activity.Petunjuk" />
         <activity android:name=".activity.konsultasi.Kesimpulan" />
-        <activity android:name=".activity.konsultasi.G03"></activity>
-        <activity android:name=".activity.konsultasi.G04"></activity>
-        <activity android:name=".activity.konsultasi.G05"></activity>
-        <activity android:name=".activity.konsultasi.G06"></activity>
-        <activity android:name=".activity.konsultasi.G07"></activity>
-        <activity android:name=".activity.konsultasi.G08"></activity>
-        <activity android:name=".activity.konsultasi.G09"></activity>
-        <activity android:name=".activity.konsultasi.G10"></activity>
-        <activity android:name=".activity.konsultasi.G11"></activity>
-        <activity android:name=".activity.konsultasi.G12"></activity>
-        <activity android:name=".activity.konsultasi.G13"></activity>
-        <activity android:name=".activity.konsultasi.G14"></activity>
-        <activity android:name=".activity.konsultasi.G15"></activity>
-        <activity android:name=".activity.konsultasi.G16"></activity>
-        <activity android:name=".activity.konsultasi.G17"></activity>
-        <activity android:name=".activity.konsultasi.G18"></activity>
-        <activity android:name=".activity.konsultasi.G19"></activity>
-        <activity android:name=".activity.konsultasi.G20"></activity>
+        <activity android:name=".activity.konsultasi.G03" />
+        <activity android:name=".activity.konsultasi.G04" />
+        <activity android:name=".activity.konsultasi.G05" />
+        <activity android:name=".activity.konsultasi.G06" />
+        <activity android:name=".activity.konsultasi.G07" />
+        <activity android:name=".activity.konsultasi.G08" />
+        <activity android:name=".activity.konsultasi.G09" />
+        <activity android:name=".activity.konsultasi.G10" />
+        <activity android:name=".activity.konsultasi.G11" />
+        <activity android:name=".activity.konsultasi.G12" />
+        <activity android:name=".activity.konsultasi.G13" />
+        <activity android:name=".activity.konsultasi.G14" />
+        <activity android:name=".activity.konsultasi.G15" />
+        <activity android:name=".activity.konsultasi.G16" />
+        <activity android:name=".activity.konsultasi.G17" />
+        <activity android:name=".activity.konsultasi.G18" />
+        <activity android:name=".activity.konsultasi.G19" />
+        <activity android:name=".activity.konsultasi.G20" />
+        <activity android:name=".activity.konsultasi.G21"></activity>
     </application>
 
 </manifest>

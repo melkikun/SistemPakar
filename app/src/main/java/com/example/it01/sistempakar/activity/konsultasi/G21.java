@@ -20,7 +20,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class G20 extends AppCompatActivity {
+public class G21 extends AppCompatActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     SharedPreferences sharedPreferences;
@@ -34,16 +34,16 @@ public class G20 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_g20);
+        setContentView(R.layout.activity_g21);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Pertanyaan 20");
+        getSupportActionBar().setTitle("Pertanyaan 21");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         sharedPreferences = getApplicationContext().getSharedPreferences(getResources().getString(R.string.app_pertanyaan), Context.MODE_PRIVATE);
-        if(sharedPreferences.contains("G20")){
-            int data = sharedPreferences.getInt("G20", 0);
+        if(sharedPreferences.contains("G21")){
+            int data = sharedPreferences.getInt("G21", 0);
             if(data == 1){
                 ya.setChecked(true);
             }else{
@@ -60,7 +60,7 @@ public class G20 extends AppCompatActivity {
             case android.R.id.home:
                 finish();
             case R.id.utama:
-                AlertDialog.Builder builder = new AlertDialog.Builder(G20.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(G21.this);
 
                 builder.setTitle("Konsultasi");
                 builder.setMessage("Apa anda yakin kembali, data anda akan hilang?");
@@ -92,27 +92,49 @@ public class G20 extends AppCompatActivity {
 
     @OnClick(R.id.lanjut)
     public void lanjut(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(G21.this);
+
+        builder.setTitle("Konfirmasi");
+        builder.setMessage("Apakah data yang anda masukkan sudah benar semuanya?");
+
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                choosen = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
+                String value = choosen.getText().toString();
+                if(value.equalsIgnoreCase("ya")){
+                    editor.putInt("G21", 1);
+                }else{
+                    editor.putInt("G21", 0);
+                }
+                editor.commit();
+                startActivity(new Intent(getApplicationContext(), Kesimpulan.class));
+            }
+        });
+
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Do nothing
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+
+    }
+
+    @OnClick(R.id.kembali)
+    public void kembali(){
         SharedPreferences.Editor editor = sharedPreferences.edit();
         choosen = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
         String value = choosen.getText().toString();
         if(value.equalsIgnoreCase("ya")){
-            editor.putInt("G20", 1);
+            editor.putInt("G21", 1);
         }else{
-            editor.putInt("G20", 0);
-        }
-        editor.commit();
-        startActivity(new Intent(this, G21.class));
-    }
-
-    @OnClick(R.id.kembali)
-    public void kembali() {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        choosen = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-        String value = choosen.getText().toString();
-        if (value.equalsIgnoreCase("ya")) {
-            editor.putInt("G20", 1);
-        } else {
-            editor.putInt("G20", 0);
+            editor.putInt("G21", 0);
         }
         editor.commit();
         startActivity(new Intent(this, G19.class));

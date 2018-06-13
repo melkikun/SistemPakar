@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Apakah anda selalu merasa haus berlebihan?"
+            android:text="Apakah Anda Mengalami Penurunan Berat Badan?"
             android:textStyle="bold"
             android:textColor="#000"
             />

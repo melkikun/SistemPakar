@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Apakah kulit anda menjadi kering atau dingin?"
+            android:text="Apakah Anda Mengalami Kulit Kering atau Dingin?"
             android:textStyle="bold"
             android:textColor="#000"
             />

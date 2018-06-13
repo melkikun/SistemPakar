@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Apakah anda tidak buang air kecil selama 12 jam lebih?"
+            android:text="Apakah Anda Mengalami Perut Kram?"
             android:textStyle="bold"
             android:textColor="#000"
             />

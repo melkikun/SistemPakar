@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" 
             android:textSize="20sp"
-            android:text="Apakah anda merasakan mual ?"
+            android:text="Apakah Anda Mengalami Mual ?"
             android:textStyle="bold"
             android:textColor="#000"
             />

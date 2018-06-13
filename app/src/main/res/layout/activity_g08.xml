@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Apakah anda mengalami sakit kepala?"
+            android:text="Apakah Anda Mengalami Sakit Perut?"
             android:textStyle="bold"
             android:textColor="#000"
             />
