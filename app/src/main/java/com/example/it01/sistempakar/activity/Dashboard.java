@@ -116,7 +116,7 @@ public class Dashboard extends AppCompatActivity {
                         break;
                     case 2:
 //                        pindah halaman ke class about
-                        startActivity(new Intent(getApplicationContext(), About.class));
+                        startActivity(new Intent(getApplicationContext(), ScrollView.class));
                         break;
                     default:
                         break;

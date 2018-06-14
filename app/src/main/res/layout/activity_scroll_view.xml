@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.it01.sistempakar.activity.konsultasi.Kesimpulan"
+    tools:ignore="MissingPrefix">
+
+    <include layout="@layout/activity_toolbar" />
+
+    <TextView
+        android:id="@+id/judul"
+        fontPath="fonts/delius_regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hasil Pemeriksaan : "
+        android:textAlignment="center"
+        android:textColor="#7B2A3B"
+        android:textStyle="bold"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--01. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        fontPath="fonts/delius_regular.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="01."
+                        android:textAlignment="textStart"
+                        android:textColor="#7B2A3B" />
+
+                    <TextView
+                        fontPath="fonts/delius_regular.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Mual"
+                        android:textAlignment="textStart"
+                        android:textColor="#7B2A3B" />
+
+                    <TextView
+                        fontPath="fonts/delius_regular.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd"
+                        android:textColor="#7B2A3B" />
+                </LinearLayout>
+                <!--02. muntah-->
+                <LinearLayout
+                    android:id="@+id/linier_muntah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="02."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Muntah"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--03. Nyeri Perut-->
+                <LinearLayout
+                    android:id="@+id/linier_nyeri_perut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="03."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Nyeri Perut"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--04. Diare-->
+                <LinearLayout
+                    android:id="@+id/linier_diare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="04."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Tensi Menurun"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--05. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="05."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Mengalami Sesak Nafas"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--06. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="06."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Tensi Menurun"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--07. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="07."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Pusing"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--08. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="08."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Sakit Perut"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--09. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="09."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Sakit Kepala"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--10. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="10."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Kehilangan Selera Makan"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--11. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="11."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="BAB Cair Lebih dari 3x"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--12. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="12."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Diare Campur Darah"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--13. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="13."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Panas"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--14. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="14."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Kelelahan"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--15. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="15."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Perut Kram"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--16. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="16."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Penuruan Berat Badan"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--17. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="17."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Sakit Otot"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--18. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="18."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Kulit Kering atau Dingin"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--19. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="19."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Tidak Buang Air Kecil 12 Jam"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--20. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="20."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Selalu Merasa Haus"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+                <!--21. mual-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.445"
+                        android:gravity="start"
+                        android:text="21."
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="start"
+                        android:text="Mata Menjadi Cekung"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="end"
+                        android:text="Ok"
+                        android:textAlignment="textEnd" />
+                </LinearLayout>
+            </LinearLayout>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#7B2A3B"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="1dp"></TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#7B2A3B"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="10dp"></TableRow>
+
+            <TextView
+                fontPath="fonts/delius_regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Analisa dan Kesimpulan"
+                android:textAlignment="center"
+                android:textColor="#7B2A3B"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TableLayout
+                    android:id="@+id/tl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white">
+
+                    <TableRow
+                        android:id="@+id/tr_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_row_bg"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingRight="10dp"
+                            android:text="Penyakit"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Analisa"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Prosentase"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="10dp"
+                            android:text="Jumlah"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_row_bg"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingRight="10dp"
+                            android:text="Keracunan Makanan" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="positif" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="100%" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="10dp"
+                            android:text="7 dari 7" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_row_bg"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingRight="10dp"
+                            android:text="Diare" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="positif" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="100%" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="10dp"
+                            android:text="7 dari 7" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_row_bg"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingRight="10dp"
+                            android:text="Radang Usus" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="positif" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="100%" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="10dp"
+                            android:text="7 dari 7" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_row_bg"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingRight="10dp"
+                            android:text="E Coli" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="positif" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="100%" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="10dp"
+                            android:text="7 dari 7" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_row_bg"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingRight="10dp"
+                            android:text="Gastro" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="positif" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="100%" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="10dp"
+                            android:text="7 dari 7" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_row_bg"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingRight="10dp"
+                            android:text="Rota" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="positif" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/table_cell_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="100%" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:paddingLeft="10dp"
+                            android:text="7 dari 7" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#7B2A3B"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="1dp"></TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#7B2A3B"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="10dp"></TableRow>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Solusi" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

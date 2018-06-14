@@ -40,9 +40,6 @@ public class Kesimpulan extends AppCompatActivity {
     //inisialisasi list view untuk tambilan list penyakit/gejala
     @BindView(R.id.list_view)
     ListView list_view;
-    //inisialisasi text view untuk tulisan kesimpulan akhir
-    @BindView(R.id.kesimpulan_akhir)
-    TextView kesimpulan_akhir;
     //hash map untuk menampung gejala penyakit sebanyak 20 gejala
     private HashMap<String, String> gejala;
     //list untuk menampung hasil dari penyakit yang di pilih pada nomer 1 sampai dengan 20
@@ -167,7 +164,7 @@ public class Kesimpulan extends AppCompatActivity {
         //list view di set dengan adapter dari kesimpulan
         list_view.setAdapter(adapter);
         //mengganti text untuk kesimpulan sesuai hasil if pada baris 145 sampai 160
-        kesimpulan_akhir.setText("Berdasarkan hasil analisa anda menderita penyakit : " + penyakit);
+//        kesimpulan_akhir.setText("Berdasarkan hasil analisa anda menderita penyakit : " + penyakit);
     }
 
     //fungsi untuk merubah font (bawaan android)

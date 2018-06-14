@@ -41,7 +41,8 @@
         <activity android:name=".activity.konsultasi.G18" />
         <activity android:name=".activity.konsultasi.G19" />
         <activity android:name=".activity.konsultasi.G20" />
-        <activity android:name=".activity.konsultasi.G21"></activity>
+        <activity android:name=".activity.konsultasi.G21" />
+        <activity android:name=".activity.ScrollView"></activity>
     </application>
 
 </manifest>
