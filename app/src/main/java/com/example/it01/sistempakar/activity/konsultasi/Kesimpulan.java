@@ -8,52 +8,79 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.it01.sistempakar.R;
 import com.example.it01.sistempakar.activity.Dashboard;
-import com.example.it01.sistempakar.adapter.KesimpulanAdapter;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-//class kesimpulan yang digunkan untuk menampilkan halaman kesimpulan
 public class Kesimpulan extends AppCompatActivity {
-    //shared preferences digunakan untuk menyimpan atau mengambil session
     SharedPreferences sharedPreferences;
     //inisialisasi toolbar
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-    //inisialisasi list view untuk tambilan list penyakit/gejala
-    @BindView(R.id.list_view)
-    ListView list_view;
-    //hash map untuk menampung gejala penyakit sebanyak 20 gejala
-    private HashMap<String, String> gejala;
-    //list untuk menampung hasil dari penyakit yang di pilih pada nomer 1 sampai dengan 20
-    private List<Integer> hasil;
-    //inisialisasi string untuk menampung jenis penyakit apa yang diderita
-    private String penyakit;
+    @BindView(R.id.mual)
+    TextView mual;
+    @BindView(R.id.muntah)
+    TextView muntah;
+    @BindView(R.id.nyeriperut)
+    TextView nyeriperut;
+    @BindView(R.id.diare)
+    TextView diare;
+    @BindView(R.id.sesaknafas)
+    TextView sesaknafas;
+    @BindView(R.id.tensimenurun)
+    TextView tensimenurun;
+    @BindView(R.id.pusing)
+    TextView pusing;
+    @BindView(R.id.sakitperut)
+    TextView sakitperut;
+    @BindView(R.id.sakitkepala)
+    TextView sakitkepala;
+    @BindView(R.id.kehilanganseleramakan)
+    TextView kehilanganseleramakan;
+    @BindView(R.id.babcair)
+    TextView babcair;
+    @BindView(R.id.diarecampurdarah)
+    TextView diarecampurdarah;
+    @BindView(R.id.panas)
+    TextView panas;
+    @BindView(R.id.kelelahan)
+    TextView kelelahan;
+    @BindView(R.id.perutkram)
+    TextView perutkram;
+    @BindView(R.id.penurunanbb)
+    TextView penurunanbb;
+    @BindView(R.id.sakitotot)
+    TextView sakitotot;
+    @BindView(R.id.kulitkering)
+    TextView kulitkering;
+    @BindView(R.id.tidakbab)
+    TextView tidakbab;
+    @BindView(R.id.haus)
+    TextView haus;
+    @BindView(R.id.matacekung)
+    TextView matacekung;
+
+    //di table
+    @BindView(R.id.analisakeracunanmakanan)
+    TextView analisakeracunanmakanan;
+    @BindView(R.id.prosentasekeracunanmakanan)
+    TextView prosentasekeracunanmakanan;
+    @BindView(R.id.jumlahkeracunanmakanan)
+    TextView jumlahkeracunanmakanan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //codingan bawaan android
         super.onCreate(savedInstanceState);
-        //mengarahkan ke layout activity kesimpulan di res/layout/activity_kesimpulan.xml
-        setContentView(R.layout.activity_kesimpulan);
-        //butter knife untuk binding id dari xml
+        setContentView(R.layout.activity_scroll_view);
         ButterKnife.bind(this);
 
         //inisialisasi font menggunakan delius regular ada di folder assets/fonts
@@ -72,99 +99,194 @@ public class Kesimpulan extends AppCompatActivity {
 
         //mengambil data session pertanyaan yang telah disimpan di setiap session (sharedpreferences anggap saja session)
         sharedPreferences = getApplicationContext().getSharedPreferences(getResources().getString(R.string.app_pertanyaan), Context.MODE_PRIVATE);
-        int gejala1 = sharedPreferences.getInt("G01", 9999); //mengambil data dari gejala 1 berisi 0 atau 1(0 tidak, 1 ya)
-        int gejala2 = sharedPreferences.getInt("G02", 9999);//mengambil data dari gejala 1 berisi 0 atau 2(0 tidak, 1 ya)
-        int gejala3 = sharedPreferences.getInt("G03", 9999);//mengambil data dari gejala 1 berisi 0 atau 3(0 tidak, 1 ya)
-        int gejala4 = sharedPreferences.getInt("G04", 9999);//mengambil data dari gejala 1 berisi 0 atau 4(0 tidak, 1 ya)
-        int gejala5 = sharedPreferences.getInt("G05", 9999);//mengambil data dari gejala 1 berisi 0 atau 5(0 tidak, 1 ya)
-        int gejala6 = sharedPreferences.getInt("G06", 9999);//mengambil data dari gejala 1 berisi 0 atau 6(0 tidak, 1 ya)
-        int gejala7 = sharedPreferences.getInt("G07", 9999);//mengambil data dari gejala 1 berisi 0 atau 7(0 tidak, 1 ya)
-        int gejala8 = sharedPreferences.getInt("G08", 9999);//mengambil data dari gejala 1 berisi 0 atau 8(0 tidak, 1 ya)
-        int gejala9 = sharedPreferences.getInt("G09", 9999);//mengambil data dari gejala 1 berisi 0 atau 9(0 tidak, 1 ya)
-        int gejala10 = sharedPreferences.getInt("G10", 9999);//mengambil data dari gejala 1 berisi 0 atau 10(0 tidak, 1 ya)
-        int gejala11 = sharedPreferences.getInt("G11", 9999);//mengambil data dari gejala 1 berisi 0 atau 11(0 tidak, 1 ya)
-        int gejala12 = sharedPreferences.getInt("G12", 9999);//mengambil data dari gejala 1 berisi 0 atau 12(0 tidak, 1 ya)
-        int gejala13 = sharedPreferences.getInt("G13", 9999);//mengambil data dari gejala 1 berisi 0 atau 13(0 tidak, 1 ya)
-        int gejala14 = sharedPreferences.getInt("G14", 9999);//mengambil data dari gejala 1 berisi 0 atau 14(0 tidak, 1 ya)
-        int gejala15 = sharedPreferences.getInt("G15", 9999);//mengambil data dari gejala 1 berisi 0 atau 15(0 tidak, 1 ya)
-        int gejala16 = sharedPreferences.getInt("G16", 9999);//mengambil data dari gejala 1 berisi 0 atau 16(0 tidak, 1 ya)
-        int gejala17 = sharedPreferences.getInt("G17", 9999);//mengambil data dari gejala 1 berisi 0 atau 17(0 tidak, 1 ya)
-        int gejala18 = sharedPreferences.getInt("G18", 9999);//mengambil data dari gejala 1 berisi 0 atau 18(0 tidak, 1 ya)
-        int gejala19 = sharedPreferences.getInt("G19", 9999);//mengambil data dari gejala 1 berisi 0 atau 19(0 tidak, 1 ya)
-        int gejala20 = sharedPreferences.getInt("G20", 9999);//mengambil data dari gejala 1 berisi 0 atau 20(0 tidak, 1 ya)
-        int gejala21 = sharedPreferences.getInt("G21", 9999);//mengambil data dari gejala 1 berisi 0 atau 20(0 tidak, 1 ya)
+        int gejala1 = sharedPreferences.getInt("G01", 0); //mengambil data dari gejala 1 berisi 0 atau 1(0 tidak, 1 ya)
+        int gejala2 = sharedPreferences.getInt("G02", 0);//mengambil data dari gejala 1 berisi 0 atau 2(0 tidak, 1 ya)
+        int gejala3 = sharedPreferences.getInt("G03", 0);//mengambil data dari gejala 1 berisi 0 atau 3(0 tidak, 1 ya)
+        int gejala4 = sharedPreferences.getInt("G04", 0);//mengambil data dari gejala 1 berisi 0 atau 4(0 tidak, 1 ya)
+        int gejala5 = sharedPreferences.getInt("G05", 0);//mengambil data dari gejala 1 berisi 0 atau 5(0 tidak, 1 ya)
+        int gejala6 = sharedPreferences.getInt("G06", 0);//mengambil data dari gejala 1 berisi 0 atau 6(0 tidak, 1 ya)
+        int gejala7 = sharedPreferences.getInt("G07", 0);//mengambil data dari gejala 1 berisi 0 atau 7(0 tidak, 1 ya)
+        int gejala8 = sharedPreferences.getInt("G08", 0);//mengambil data dari gejala 1 berisi 0 atau 8(0 tidak, 1 ya)
+        int gejala9 = sharedPreferences.getInt("G09", 0);//mengambil data dari gejala 1 berisi 0 atau 9(0 tidak, 1 ya)
+        int gejala10 = sharedPreferences.getInt("G10", 0);//mengambil data dari gejala 1 berisi 0 atau 10(0 tidak, 1 ya)
+        int gejala11 = sharedPreferences.getInt("G11", 0);//mengambil data dari gejala 1 berisi 0 atau 11(0 tidak, 1 ya)
+        int gejala12 = sharedPreferences.getInt("G12", 0);//mengambil data dari gejala 1 berisi 0 atau 12(0 tidak, 1 ya)
+        int gejala13 = sharedPreferences.getInt("G13", 0);//mengambil data dari gejala 1 berisi 0 atau 13(0 tidak, 1 ya)
+        int gejala14 = sharedPreferences.getInt("G14", 0);//mengambil data dari gejala 1 berisi 0 atau 14(0 tidak, 1 ya)
+        int gejala15 = sharedPreferences.getInt("G15", 0);//mengambil data dari gejala 1 berisi 0 atau 15(0 tidak, 1 ya)
+        int gejala16 = sharedPreferences.getInt("G16", 0);//mengambil data dari gejala 1 berisi 0 atau 16(0 tidak, 1 ya)
+        int gejala17 = sharedPreferences.getInt("G17", 0);//mengambil data dari gejala 1 berisi 0 atau 17(0 tidak, 1 ya)
+        int gejala18 = sharedPreferences.getInt("G18", 0);//mengambil data dari gejala 1 berisi 0 atau 18(0 tidak, 1 ya)
+        int gejala19 = sharedPreferences.getInt("G19", 0);//mengambil data dari gejala 1 berisi 0 atau 19(0 tidak, 1 ya)
+        int gejala20 = sharedPreferences.getInt("G20", 0);//mengambil data dari gejala 1 berisi 0 atau 20(0 tidak, 1 ya)
+        int gejala21 = sharedPreferences.getInt("G21", 0);//mengambil data dari gejala 1 berisi 0 atau 20(0 tidak, 1 ya)
 
-        //inisialisasi list yang ada pada baris 49 dijadikan array list
-        hasil = new ArrayList<>();
-        hasil.add(gejala1);//menampung variiabel gejala 1 ke dalam list
-        hasil.add(gejala2);//menampung variiabel gejala 2 ke dalam list
-        hasil.add(gejala3);//menampung variiabel gejala 3 ke dalam list
-        hasil.add(gejala4);//menampung variiabel gejala 4 ke dalam list
-        hasil.add(gejala5);//menampung variiabel gejala 5 ke dalam list
-        hasil.add(gejala6);//menampung variiabel gejala 6 ke dalam list
-        hasil.add(gejala7);//menampung variiabel gejala  7 ke dalam list
-        hasil.add(gejala8);//menampung variiabel gejala 8 ke dalam list
-        hasil.add(gejala9);//menampung variiabel gejala 9 ke dalam list
-        hasil.add(gejala10);//menampung variiabel gejala 10 ke dalam list
-        hasil.add(gejala11);//menampung variiabel gejala 11 ke dalam list
-        hasil.add(gejala12);//menampung variiabel gejala 12 ke dalam list
-        hasil.add(gejala13);//menampung variiabel gejala  13 ke dalam list
-        hasil.add(gejala14);//menampung variiabel gejala 14 ke dalam list
-        hasil.add(gejala15);//menampung variiabel gejala 15 ke dalam list
-        hasil.add(gejala16);//menampung variiabel gejala 16 ke dalam list
-        hasil.add(gejala17);//menampung variiabel gejala 17 ke dalam list
-        hasil.add(gejala18);//menampung variiabel gejala 18 ke dalam list
-        hasil.add(gejala19);//menampung variiabel gejala 19 ke dalam list
-        hasil.add(gejala20);//menampung variiabel gejala 20 ke dalam list
-        hasil.add(gejala21);//menampung variiabel gejala 20 ke dalam list
-
-        gejala = new HashMap<>(); //inisialisasi hash map berisi kode gejala dan nama gejala yang ada pada baris 49 dijadikan array list
-        gejala.put("G1", "Mual"); //kode gejala G1 bernama mual
-        gejala.put("G2", "Muntah"); //sama seperti kode gejala G1
-        gejala.put("G3", "Nyeri Perut");
-        gejala.put("G4", "Diare");
-        gejala.put("G5", "Mengalami Sesak Nafas");
-        gejala.put("G6", "Tensi Menurun");
-        gejala.put("G7", "Pusing");
-        gejala.put("G8", "Sakit Perut");
-        gejala.put("G9", "Sakit Kepala");
-        gejala.put("G10", "Kehilangan Selera Makan");
-        gejala.put("G11", "BAB Cair Lebih dari 3x");
-        gejala.put("G12", "Diare Bercampur Darah");
-        gejala.put("G13", "Panas");
-        gejala.put("G14", "Kelelahan");
-        gejala.put("G15", "Perut Kram");
-        gejala.put("G16", "Penurunan Berat Badan");
-        gejala.put("G17", "Sakit Otot");
-        gejala.put("G18", "Kulit Kering atau Dingin");
-        gejala.put("G19", "Tidak Buang Air Kecil 12 Jam");
-        gejala.put("G20", "Selalu Merasa Haus");
-        gejala.put("G21", "Mata Menjadi Cekung");
-
-        //PENGECEKAN UTAMA DARI GEJALA YANG TELAH DI PILIH DARI PERTANYAAN 1 SAMPAI DENGAN 20 DAN HASILNYA AKAN DI TAMPUNG DI VARIABEL PENYAKIT
-        //jika gejala 1 ya dan gejala 2 ya dan gejala 3 ya dan gejala 4 ya dan gejala 5 ya dan gejala 6 ya makan hasilnya addalah keracunan makanan
-        if (gejala1 == 1 && gejala2 == 1 && gejala3 == 1 && gejala4 == 1 && gejala5 == 1 && gejala6 == 1) {
-            penyakit = "Keracunan Makanan";
-        } else if (gejala1 == 1 && gejala17 == 1 && gejala18 == 1 && gejala3 == 1 && gejala10 == 1 && gejala19 == 1) {
-            penyakit = "Diare";
-        } else if (gejala1 == 1 && gejala11 == 1 && gejala12 == 1) {
-            penyakit = "Radang Usus";
-        } else if (gejala1 == 1 && gejala11 == 1 && gejala12 == 1 && gejala13 == 1 && gejala19 == 1 && gejala14 == 1 && gejala17 == 1) {
-            penyakit = "E.Coli";
-        } else if (gejala1 == 1 && gejala17 == 1 && gejala18 == 1 && gejala3 == 1 && gejala10 == 1 && gejala14 == 1 && gejala20 == 1 && gejala18 == 1) {
-            penyakit = "Gastro Entritis";
-        } else if (gejala1 == 1 && gejala11 == 1 && gejala12 == 1 && gejala18 == 1 && gejala15 == 1 && gejala16 == 1 && gejala17 == 1 && gejala6 == 1) {
-            penyakit = "Rotaviurus";
-            //jika if mulai baris 146 sampai 156 tidak menghasilkan penyakit maka penyakitnya adalah tidak di temukan
-        } else {
-            penyakit = "Penyakit Tidak Ditemukan";
+        //1. mual
+        if(gejala1 == 1){
+            mual.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            mual.setText("x");
         }
-        //mengambil data dari class adapter untuk di tampilkan berupa list / daftar penyakit (lihat class kesimpulan adapter)
-        KesimpulanAdapter adapter = new KesimpulanAdapter(getApplicationContext(), gejala, hasil);
-        //list view di set dengan adapter dari kesimpulan
-        list_view.setAdapter(adapter);
-        //mengganti text untuk kesimpulan sesuai hasil if pada baris 145 sampai 160
-//        kesimpulan_akhir.setText("Berdasarkan hasil analisa anda menderita penyakit : " + penyakit);
+        //2. muntah
+        if(gejala2 == 1){
+            muntah.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            muntah.setText("x");
+        }
+        //3. nyeri perut
+        if(gejala3 == 1){
+            nyeriperut.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            nyeriperut.setText("x");
+        }
+        //4. diare
+        if(gejala4 == 1){
+            diare.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            diare.setText("x");
+        }
+        //5. sesak nafas
+        if(gejala5 == 1){
+            sesaknafas.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            sesaknafas.setText("x");
+        }
+        //6. tensi menurun
+        if(gejala6 == 1){
+            tensimenurun.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            tensimenurun.setText("x");
+        }
+        //7. pusing
+        if(gejala7 == 1){
+            pusing.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            pusing.setText("x");
+        }
+        //8. sakit perut
+        if(gejala8 == 1){
+            sakitperut.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            sakitperut.setText("x");
+        }
+        //9. sakitkepala
+        if(gejala9 == 1){
+            sakitkepala.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            sakitkepala.setText("x");
+        }
+        //10. kehilangan selera makan
+        if(gejala10 == 1){
+            kehilanganseleramakan.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            kehilanganseleramakan.setText("x");
+        }
+        //11. bab cair lebih dari 3x
+        if(gejala11 == 1){
+            babcair.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            babcair.setText("x");
+        }
+        //12. diare bercampur darah
+        if(gejala12 == 1){
+            diarecampurdarah.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            diarecampurdarah.setText("x");
+        }
+        //13. panas
+        if(gejala13 == 1){
+            panas.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            panas.setText("x");
+        }
+        //14. kelelahan
+        if(gejala14 == 1){
+            kelelahan.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            kelelahan.setText("x");
+        }
+        //15. perut keram
+        if(gejala15 == 1){
+            perutkram.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            perutkram.setText("x");
+        }
+        //16. penurunan bb
+        if(gejala16 == 1){
+            penurunanbb.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            penurunanbb.setText("x");
+        }
+        //17. sakitotot
+        if(gejala17 == 1){
+            sakitotot.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            sakitotot.setText("x");
+        }
+        //18. kulit kering
+        if(gejala18 == 1){
+            kulitkering.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            kulitkering.setText("x");
+        }
+        //19. tidak bab
+        if(gejala19 == 1){
+            tidakbab.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            tidakbab.setText("x");
+        }
+        //20. haus
+        if(gejala20 == 1){
+            haus.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            haus.setText("x");
+        }
+        //21. mata cekung
+        if(gejala21 == 1){
+            matacekung.setText(Html.fromHtml("&#x2713;"));
+        }else{
+            matacekung.setText("x");
+        }
+
+        double keracunanMakanan = 0;
+        if(gejala1 == 1){
+            keracunanMakanan+=1;
+        }
+
+        if(gejala2 ==1){
+            keracunanMakanan+=1;
+        }
+
+        if(gejala3 ==1){
+            keracunanMakanan+=1;
+        }
+
+        if(gejala4 ==1){
+            keracunanMakanan+=1;
+        }
+
+        if(gejala5 ==1){
+            keracunanMakanan+=1;
+        }
+
+        if(gejala6 ==1){
+            keracunanMakanan+=1;
+        }
+
+
+        if(gejala7 ==1){
+            keracunanMakanan+=1;
+        }
+
+        if(keracunanMakanan == 7){
+            analisakeracunanmakanan.setText("positif");
+            jumlahkeracunanmakanan.setText(String.format("%.0f", keracunanMakanan )+ " dari " + "7");
+            prosentasekeracunanmakanan.setText(String.format("%.2f", keracunanMakanan/7*100)+"");
+        }else{
+            analisakeracunanmakanan.setText("negatif");
+            jumlahkeracunanmakanan.setText(String.format("%.0f", keracunanMakanan ) + " dari " + "7");
+            prosentasekeracunanmakanan.setText(String.format("%.2f", keracunanMakanan/7*100)+"");
+        }
     }
 
     //fungsi untuk merubah font (bawaan android)
@@ -182,7 +304,7 @@ public class Kesimpulan extends AppCompatActivity {
                 //memanggil fungsi kembali ke home
                 kembaliKeHome();
                 break;
-                //jika selesai akan kembali ke halaman utama
+            //jika selesai akan kembali ke halaman utama
             case R.id.utama:
                 //memanggil fungsi kembali ke home
                 kembaliKeHome();

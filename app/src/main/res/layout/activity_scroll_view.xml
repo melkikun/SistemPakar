@@ -42,13 +42,13 @@
                     android:padding="1dp">
 
                     <TextView
-                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="01."
                         android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
                         android:textColor="#7B2A3B" />
 
                     <TextView
@@ -67,9 +67,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
                         android:textAlignment="textEnd"
-                        android:textColor="#7B2A3B" />
+                        android:textColor="#7B2A3B"
+                        android:id="@+id/mual"
+                        />
                 </LinearLayout>
                 <!--02. muntah-->
                 <LinearLayout
@@ -79,28 +80,35 @@
                     android:padding="1dp">
 
                     <TextView
+                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="02."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
+                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Muntah"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
+                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/muntah"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--03. Nyeri Perut-->
                 <LinearLayout
@@ -110,28 +118,35 @@
                     android:padding="1dp">
 
                     <TextView
+                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="03."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
+                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Nyeri Perut"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
+                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textColor="#7B2A3B"
+                        android:id="@+id/nyeriperut"
+                        />
                 </LinearLayout>
                 <!--04. Diare-->
                 <LinearLayout
@@ -141,28 +156,35 @@
                     android:padding="1dp">
 
                     <TextView
+                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="04."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
+                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
                         android:gravity="start"
-                        android:text="Tensi Menurun"
-                        android:textAlignment="textStart" />
+                        android:text="Diare"
+                        android:textAlignment="textStart"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
+                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textColor="#7B2A3B"
+                        android:id="@+id/diare"
+                        />
                 </LinearLayout>
                 <!--05. mual-->
                 <LinearLayout
@@ -171,28 +193,35 @@
                     android:padding="1dp">
 
                     <TextView
+                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="05."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
+                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Mengalami Sesak Nafas"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
+                        fontPath="fonts/delius_regular.ttf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textColor="#7B2A3B"
+                        android:id="@+id/sesaknafas"
+                        />
                 </LinearLayout>
                 <!--06. mual-->
                 <LinearLayout
@@ -206,7 +235,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="06."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -214,15 +245,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Tensi Menurun"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/tensimenurun"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--07. mual-->
                 <LinearLayout
@@ -236,7 +272,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="07."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -244,15 +282,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Pusing"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/pusing"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--08. mual-->
                 <LinearLayout
@@ -266,7 +309,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="08."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -274,15 +319,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Sakit Perut"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/sakitperut"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--09. mual-->
                 <LinearLayout
@@ -296,7 +346,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="09."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -304,7 +356,9 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Sakit Kepala"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -312,7 +366,11 @@
                         android:layout_weight="0.3"
                         android:gravity="end"
                         android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/sakitkepala"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--10. mual-->
                 <LinearLayout
@@ -326,7 +384,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="10."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -334,15 +394,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Kehilangan Selera Makan"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/kehilanganseleramakan"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--11. mual-->
                 <LinearLayout
@@ -356,7 +421,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="11."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -364,15 +431,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="BAB Cair Lebih dari 3x"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/babcair"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--12. mual-->
                 <LinearLayout
@@ -386,7 +458,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="12."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -394,15 +468,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Diare Campur Darah"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/diarecampurdarah"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--13. mual-->
                 <LinearLayout
@@ -416,7 +495,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="13."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -424,15 +505,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Panas"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/panas"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--14. mual-->
                 <LinearLayout
@@ -446,7 +532,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="14."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -454,15 +542,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Kelelahan"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/kelelahan"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--15. mual-->
                 <LinearLayout
@@ -476,7 +569,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="15."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -484,15 +579,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Perut Kram"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/perutkram"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--16. mual-->
                 <LinearLayout
@@ -506,7 +606,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="16."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -514,15 +616,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Penuruan Berat Badan"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/penurunanbb"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--17. mual-->
                 <LinearLayout
@@ -536,7 +643,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="17."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -544,15 +653,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Sakit Otot"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/sakitotot"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--18. mual-->
                 <LinearLayout
@@ -566,7 +680,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="18."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -574,15 +690,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Kulit Kering atau Dingin"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/kulitkering"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--19. mual-->
                 <LinearLayout
@@ -596,7 +717,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="19."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -604,15 +727,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Tidak Buang Air Kecil 12 Jam"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/tidakbab"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--20. mual-->
                 <LinearLayout
@@ -626,7 +754,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="20."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -634,15 +764,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Selalu Merasa Haus"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/haus"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
                 <!--21. mual-->
                 <LinearLayout
@@ -656,7 +791,9 @@
                         android:layout_weight="0.445"
                         android:gravity="start"
                         android:text="21."
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -664,15 +801,20 @@
                         android:layout_weight="0.2"
                         android:gravity="start"
                         android:text="Mata Menjadi Cekung"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
                         android:gravity="end"
-                        android:text="Ok"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:id="@+id/matacekung"
+                        fontPath="fonts/delius_regular.ttf"
+                        android:textColor="#7B2A3B"
+                        />
                 </LinearLayout>
             </LinearLayout>
             <TableRow
@@ -694,8 +836,9 @@
                 android:layout_height="wrap_content"
                 android:text="Analisa dan Kesimpulan"
                 android:textAlignment="center"
-                android:textColor="#7B2A3B"
-                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textStyle="bold|italic"
+                android:textSize="15dp"
                 />
 
             <LinearLayout
@@ -771,7 +914,8 @@
                             android:background="@drawable/table_cell_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="positif" />
+                            android:id="@+id/analisakeracunanmakanan"
+                            />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -780,14 +924,17 @@
                             android:background="@drawable/table_cell_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="100%" />
+                            android:id="@+id/prosentasekeracunanmakanan"
+                            />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
                             android:paddingLeft="10dp"
-                            android:text="7 dari 7" />
+                            android:text="7 dari 7"
+                            android:id="@+id/jumlahkeracunanmakanan"
+                            />
                     </TableRow>
 
                     <TableRow
