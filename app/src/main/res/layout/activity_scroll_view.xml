@@ -852,6 +852,7 @@
                     android:layout_height="match_parent"
                     android:background="@android:color/white">
 
+                    <!--TABLE HEADER-->
                     <TableRow
                         android:id="@+id/tr_header"
                         android:layout_width="match_parent"
@@ -894,6 +895,7 @@
                             android:textStyle="bold" />
                     </TableRow>
 
+                    <!--KERACUNAN MAKANAN-->
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -937,6 +939,7 @@
                             />
                     </TableRow>
 
+                    <!--DIARE-->
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -957,7 +960,7 @@
                             android:background="@drawable/table_cell_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="positif" />
+                            android:id="@+id/analisadiare" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -966,16 +969,18 @@
                             android:background="@drawable/table_cell_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="100%" />
+                            android:id="@+id/prosentasediare"
+                            />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
                             android:paddingLeft="10dp"
-                            android:text="7 dari 7" />
+                            android:id="@+id/jumlahdiare"/>
                     </TableRow>
 
+                    <!--RADANG USUS-->
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -996,7 +1001,7 @@
                             android:background="@drawable/table_cell_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="positif" />
+                            android:id="@+id/analisaradangusus" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -1005,16 +1010,17 @@
                             android:background="@drawable/table_cell_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="100%" />
+                            android:id="@+id/prosentaseradangusus" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
                             android:paddingLeft="10dp"
-                            android:text="7 dari 7" />
+                            android:id="@+id/jumlahradangusus" />
                     </TableRow>
 
+                    <!--E COLI-->
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -1035,7 +1041,7 @@
                             android:background="@drawable/table_cell_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="positif" />
+                            android:id="@+id/analisecoli" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -1044,16 +1050,17 @@
                             android:background="@drawable/table_cell_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="100%" />
+                            android:id="@+id/prosentaseecoli" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
                             android:paddingLeft="10dp"
-                            android:text="7 dari 7" />
+                            android:id="@+id/jumlahecoli" />
                     </TableRow>
 
+                    <!--gastroentitis-->
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -1065,7 +1072,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/table_cell_bg"
                             android:paddingRight="10dp"
-                            android:text="Gastro" />
+                            android:text="Gastroentitis" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -1074,7 +1081,7 @@
                             android:background="@drawable/table_cell_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="positif" />
+                            android:id="@+id/analisagastro"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -1083,16 +1090,17 @@
                             android:background="@drawable/table_cell_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="100%" />
+                            android:id="@+id/prosentasegastro" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
                             android:paddingLeft="10dp"
-                            android:text="7 dari 7" />
+                            android:id="@+id/jumlahgastro" />
                     </TableRow>
 
+                    <!--rotavirus-->
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -1104,7 +1112,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/table_cell_bg"
                             android:paddingRight="10dp"
-                            android:text="Rota" />
+                            android:text="Rotavirus" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -1113,7 +1121,7 @@
                             android:background="@drawable/table_cell_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="positif" />
+                            android:id="@+id/analisarota" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -1122,14 +1130,14 @@
                             android:background="@drawable/table_cell_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="100%" />
+                            android:id="@+id/prosentaserota" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right"
                             android:paddingLeft="10dp"
-                            android:text="7 dari 7" />
+                            android:id="@+id/jumlahrota" />
                     </TableRow>
                 </TableLayout>
             </LinearLayout>
@@ -1149,15 +1157,229 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <Button
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:text="Solusi" />
+                    android:id="@+id/solusi"
+                    />
             </LinearLayout>
 
+            <!--1 . SOLUSI KERACUNAN MAKANAN-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/solusi_keracunan_makanan"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Solusi Keracunan Makanan : "
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Segera Hubungi Dokter Terdekat Agar Mendapat Penangganan "
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ff0036"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="1dp"></TableRow>
+            </LinearLayout>
+
+            <!--2. SOLUSI DIARE-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/solusi_diare"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Solusi Diare: "
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Minum Oralit "
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. Pemberian jambu biji atau salak."
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3. Informasi yang diberikan bukanlah pengganti nasehat medis. SELALU konsultasikan pada dokter Anda."
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ff0036"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="1dp"></TableRow>
+            </LinearLayout>
+
+            <!--3. Solusi Radang Usus-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/solusi_rading_usus"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Solusi Radang Usus: "
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Segera Konsultasikan ke Dokter"
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ff0036"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="1dp"></TableRow>
+            </LinearLayout>
+
+            <!--4. Solusi E Coli -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/solusi_e_coli"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Solusi E Coli: "
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Segera Konsultasikan ke Dokter"
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ff0036"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="1dp"></TableRow>
+            </LinearLayout>
+
+            <!--5. Solusi Gastroenteritis-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/solusi_gastro"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Solusi Gastroenteritis: "
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Segera Konsultasikan ke Dokter"
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ff0036"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="1dp"></TableRow>
+            </LinearLayout>
+
+            <!--6. Solusi Rotavirus-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/solusi_rota"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Solusi Rotavirus: "
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Segera Konsultasikan ke Dokter"
+                    android:textColor="#000000"
+                    android:textStyle="bold|italic"
+                    android:textSize="15dp"
+                    />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ff0036"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="1dp"></TableRow>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                ></LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

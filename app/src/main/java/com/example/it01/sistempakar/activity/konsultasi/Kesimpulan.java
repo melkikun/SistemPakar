@@ -11,6 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.it01.sistempakar.R;
@@ -69,13 +71,75 @@ public class Kesimpulan extends AppCompatActivity {
     @BindView(R.id.matacekung)
     TextView matacekung;
 
-    //di table
+    @BindView(R.id.solusi)
+    TextView solusiText;
+
+    //keracunan makanan table
     @BindView(R.id.analisakeracunanmakanan)
     TextView analisakeracunanmakanan;
     @BindView(R.id.prosentasekeracunanmakanan)
     TextView prosentasekeracunanmakanan;
     @BindView(R.id.jumlahkeracunanmakanan)
     TextView jumlahkeracunanmakanan;
+
+    //diare table
+    @BindView(R.id.analisadiare)
+    TextView analisadiare;
+    @BindView(R.id.prosentasediare)
+    TextView prosentasediare;
+    @BindView(R.id.jumlahdiare)
+    TextView jumlahdiare;
+
+    //radang usus table
+    @BindView(R.id.analisaradangusus)
+    TextView analisaradangusus;
+    @BindView(R.id.prosentaseradangusus)
+    TextView prosentaseradangusus;
+    @BindView(R.id.jumlahradangusus)
+    TextView jumlahradangusus;
+
+    //e coli table
+    @BindView(R.id.analisecoli)
+    TextView analisecoli;
+    @BindView(R.id.prosentaseecoli)
+    TextView prosentaseecoli;
+    @BindView(R.id.jumlahecoli)
+    TextView jumlahecoli;
+
+    //GASTRO table
+    @BindView(R.id.analisagastro)
+    TextView analisagastro;
+    @BindView(R.id.prosentasegastro)
+    TextView prosentasegastro;
+    @BindView(R.id.jumlahgastro)
+    TextView jumlahgastro;
+
+    //rota table
+    @BindView(R.id.analisarota)
+    TextView analisarota;
+    @BindView(R.id.prosentaserota)
+    TextView prosentaserota;
+    @BindView(R.id.jumlahrota)
+    TextView jumlahrota;
+
+    //kesimpulan solusi_keracunan_makanan
+    @BindView(R.id.solusi_keracunan_makanan)
+    LinearLayout solusi_keracunan_makanan;
+    //kesimpulan solusi_diare
+    @BindView(R.id.solusi_diare)
+    LinearLayout solusi_diare;
+    //kesimpulan solusi_rading_usus
+    @BindView(R.id.solusi_rading_usus)
+    LinearLayout solusi_rading_usus;
+    //kesimpulan solusi_e_coli
+    @BindView(R.id.solusi_e_coli)
+    LinearLayout solusi_e_coli;
+    //kesimpulan solusi_gastro
+    @BindView(R.id.solusi_gastro)
+    LinearLayout solusi_gastro;
+    //kesimpulan solusi_rota
+    @BindView(R.id.solusi_rota)
+    LinearLayout solusi_rota;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,171 +186,316 @@ public class Kesimpulan extends AppCompatActivity {
         int gejala21 = sharedPreferences.getInt("G21", 0);//mengambil data dari gejala 1 berisi 0 atau 20(0 tidak, 1 ya)
 
         //1. mual
-        if(gejala1 == 1){
+        if (gejala1 == 1) {
             mual.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             mual.setText("x");
         }
         //2. muntah
-        if(gejala2 == 1){
+        if (gejala2 == 1) {
             muntah.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             muntah.setText("x");
         }
         //3. nyeri perut
-        if(gejala3 == 1){
+        if (gejala3 == 1) {
             nyeriperut.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             nyeriperut.setText("x");
         }
         //4. diare
-        if(gejala4 == 1){
+        if (gejala4 == 1) {
             diare.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             diare.setText("x");
         }
         //5. sesak nafas
-        if(gejala5 == 1){
+        if (gejala5 == 1) {
             sesaknafas.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             sesaknafas.setText("x");
         }
         //6. tensi menurun
-        if(gejala6 == 1){
+        if (gejala6 == 1) {
             tensimenurun.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             tensimenurun.setText("x");
         }
         //7. pusing
-        if(gejala7 == 1){
+        if (gejala7 == 1) {
             pusing.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             pusing.setText("x");
         }
         //8. sakit perut
-        if(gejala8 == 1){
+        if (gejala8 == 1) {
             sakitperut.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             sakitperut.setText("x");
         }
         //9. sakitkepala
-        if(gejala9 == 1){
+        if (gejala9 == 1) {
             sakitkepala.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             sakitkepala.setText("x");
         }
         //10. kehilangan selera makan
-        if(gejala10 == 1){
+        if (gejala10 == 1) {
             kehilanganseleramakan.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             kehilanganseleramakan.setText("x");
         }
         //11. bab cair lebih dari 3x
-        if(gejala11 == 1){
+        if (gejala11 == 1) {
             babcair.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             babcair.setText("x");
         }
         //12. diare bercampur darah
-        if(gejala12 == 1){
+        if (gejala12 == 1) {
             diarecampurdarah.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             diarecampurdarah.setText("x");
         }
         //13. panas
-        if(gejala13 == 1){
+        if (gejala13 == 1) {
             panas.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             panas.setText("x");
         }
         //14. kelelahan
-        if(gejala14 == 1){
+        if (gejala14 == 1) {
             kelelahan.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             kelelahan.setText("x");
         }
         //15. perut keram
-        if(gejala15 == 1){
+        if (gejala15 == 1) {
             perutkram.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             perutkram.setText("x");
         }
         //16. penurunan bb
-        if(gejala16 == 1){
+        if (gejala16 == 1) {
             penurunanbb.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             penurunanbb.setText("x");
         }
         //17. sakitotot
-        if(gejala17 == 1){
+        if (gejala17 == 1) {
             sakitotot.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             sakitotot.setText("x");
         }
         //18. kulit kering
-        if(gejala18 == 1){
+        if (gejala18 == 1) {
             kulitkering.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             kulitkering.setText("x");
         }
         //19. tidak bab
-        if(gejala19 == 1){
+        if (gejala19 == 1) {
             tidakbab.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             tidakbab.setText("x");
         }
         //20. haus
-        if(gejala20 == 1){
+        if (gejala20 == 1) {
             haus.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             haus.setText("x");
         }
         //21. mata cekung
-        if(gejala21 == 1){
+        if (gejala21 == 1) {
             matacekung.setText(Html.fromHtml("&#x2713;"));
-        }else{
+        } else {
             matacekung.setText("x");
         }
 
+
+        //untuk keracunana makanan
         double keracunanMakanan = 0;
-        if(gejala1 == 1){
-            keracunanMakanan+=1;
+        double diareTable = 0;
+        double radangUsusTable = 0;
+        double eColiTable = 0;
+        double gastro = 0;
+        double rota = 0;
+        String solusi = "";
+
+        if (gejala1 == 1) {
+            keracunanMakanan += 1;
+            diareTable += 1;
+            radangUsusTable += 1;
+            eColiTable += 1;
+            gastro += 1;
+            rota += 1;
         }
 
-        if(gejala2 ==1){
-            keracunanMakanan+=1;
+        if (gejala2 == 1) {
+            keracunanMakanan += 1;
+            diareTable += 1;
+            radangUsusTable += 1;
         }
 
-        if(gejala3 ==1){
-            keracunanMakanan+=1;
+        if (gejala3 == 1) {
+            keracunanMakanan += 1;
+            radangUsusTable += 1;
         }
 
-        if(gejala4 ==1){
-            keracunanMakanan+=1;
+        if (gejala4 == 1) {
+            keracunanMakanan += 1;
+            eColiTable += 1;
         }
 
-        if(gejala5 ==1){
-            keracunanMakanan+=1;
+        if (gejala5 == 1) {
+            keracunanMakanan += 1;
         }
 
-        if(gejala6 ==1){
-            keracunanMakanan+=1;
+        if (gejala6 == 1) {
+            keracunanMakanan += 1;
         }
 
-
-        if(gejala7 ==1){
-            keracunanMakanan+=1;
+        if (gejala7 == 1) {
+            keracunanMakanan += 1;
         }
 
-        if(keracunanMakanan == 7){
+        if (gejala8 == 1) {
+            diareTable += 1;
+            eColiTable += 1;
+            gastro += 1;
+        }
+
+        if (gejala9 == 1) {
+            diareTable += 1;
+            gastro += 1;
+        }
+
+        if (gejala10 == 1) {
+            diareTable += 1;
+            gastro += 1;
+        }
+
+        if (gejala11 == 1) {
+            diareTable += 1;
+        }
+
+        if (gejala12 == 1) {
+            radangUsusTable += 1;
+            eColiTable += 1;
+            rota += 1;
+        }
+
+        if (gejala13 == 1) {
+            radangUsusTable += 1;
+            eColiTable += 1;
+            gastro += 1;
+        }
+
+        if (gejala14 == 1) {
+            eColiTable += 1;
+            rota += 1;
+        }
+
+        if (gejala15 == 1) {
+            eColiTable += 1;
+        }
+
+        if (gejala16 == 1) {
+            gastro += 1;
+        }
+
+        if (gejala17 == 1) {
+            gastro += 1;
+        }
+
+        if (gejala18 == 1) {
+            rota += 1;
+        }
+
+        if (gejala19 == 1) {
+            rota += 1;
+        }
+
+        if (gejala20 == 1) {
+            rota += 1;
+        }
+
+        if (gejala21 == 1) {
+            rota += 1;
+        }
+        if (keracunanMakanan == 7) {
             analisakeracunanmakanan.setText("positif");
-            jumlahkeracunanmakanan.setText(String.format("%.0f", keracunanMakanan )+ " dari " + "7");
-            prosentasekeracunanmakanan.setText(String.format("%.2f", keracunanMakanan/7*100)+"");
-        }else{
+            jumlahkeracunanmakanan.setText(String.format("%.0f", keracunanMakanan) + " dari " + "7");
+            prosentasekeracunanmakanan.setText(String.format("%.2f", keracunanMakanan / 7 * 100) + "%");
+            solusi_keracunan_makanan.setVisibility(View.VISIBLE);
+        } else {
             analisakeracunanmakanan.setText("negatif");
-            jumlahkeracunanmakanan.setText(String.format("%.0f", keracunanMakanan ) + " dari " + "7");
-            prosentasekeracunanmakanan.setText(String.format("%.2f", keracunanMakanan/7*100)+"");
+            jumlahkeracunanmakanan.setText(String.format("%.0f", keracunanMakanan) + " dari " + "7");
+            prosentasekeracunanmakanan.setText(String.format("%.2f", keracunanMakanan / 7 * 100) + "%");
+            solusi_keracunan_makanan.setVisibility(View.GONE);
         }
+
+        if (diareTable == 6) {
+            analisadiare.setText("positif");
+            jumlahdiare.setText(String.format("%.0f", diareTable) + " dari " + "6");
+            prosentasediare.setText(String.format("%.2f", diareTable / 6 * 100) + "%");
+            solusi_diare.setVisibility(View.VISIBLE);
+        } else {
+            analisadiare.setText("negatif");
+            jumlahdiare.setText(String.format("%.0f", diareTable) + " dari " + "6");
+            prosentasediare.setText(String.format("%.2f", diareTable / 6 * 100) + "%");
+            solusi_diare.setVisibility(View.GONE);
+        }
+
+        if (radangUsusTable == 5) {
+            analisaradangusus.setText("positif");
+            jumlahradangusus.setText(String.format("%.0f", radangUsusTable) + " dari " + "5");
+            prosentaseradangusus.setText(String.format("%.2f", radangUsusTable / 5 * 100) + "%");
+            solusi_rading_usus.setVisibility(View.VISIBLE);
+        } else {
+            analisaradangusus.setText("negatif");
+            jumlahradangusus.setText(String.format("%.0f", radangUsusTable) + " dari " + "5");
+            prosentaseradangusus.setText(String.format("%.2f", radangUsusTable / 5 * 100) + "%");
+            solusi_rading_usus.setVisibility(View.GONE);
+        }
+
+        if (eColiTable == 7) {
+            analisecoli.setText("positif");
+            jumlahecoli.setText(String.format("%.0f", eColiTable) + " dari " + "7");
+            prosentaseecoli.setText(String.format("%.2f", eColiTable / 7 * 100) + "%");
+            solusi_e_coli.setVisibility(View.VISIBLE);
+        } else {
+            analisecoli.setText("negatif");
+            jumlahecoli.setText(String.format("%.0f", eColiTable) + " dari " + "7");
+            prosentaseecoli.setText(String.format("%.2f", eColiTable / 7 * 100) + "%");
+            solusi_e_coli.setVisibility(View.GONE);
+        }
+
+        if (gastro == 7) {
+            analisagastro.setText("positif");
+            jumlahgastro.setText(String.format("%.0f", gastro) + " dari " + "7");
+            prosentasegastro.setText(String.format("%.2f", gastro / 7 * 100) + "%");
+            solusi_gastro.setVisibility(View.VISIBLE);
+        } else {
+            analisagastro.setText("negatif");
+            jumlahgastro.setText(String.format("%.0f", gastro) + " dari " + "7");
+            prosentasegastro.setText(String.format("%.2f", gastro / 7 * 100) + "%");
+            solusi_gastro.setVisibility(View.GONE);
+        }
+
+        if (rota == 7) {
+            analisarota.setText("positif");
+            jumlahrota.setText(String.format("%.0f", rota) + " dari " + "7");
+            prosentaserota.setText(String.format("%.2f", rota / 7 * 100) + "%");
+            solusi_rota.setVisibility(View.VISIBLE);
+        } else {
+            analisarota.setText("negatif");
+            jumlahrota.setText(String.format("%.0f", rota) + " dari " + "7");
+            prosentaserota.setText(String.format("%.2f", rota / 7 * 100) + "%");
+            solusi_rota.setVisibility(View.GONE);
+        }
+
+//        solusiText.setText(solusi);
     }
 
     //fungsi untuk merubah font (bawaan android)
