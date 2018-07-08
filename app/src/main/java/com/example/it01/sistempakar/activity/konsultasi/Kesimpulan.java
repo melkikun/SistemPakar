@@ -322,6 +322,7 @@ public class Kesimpulan extends AppCompatActivity {
         double rota = 0;
         String solusi = "";
 
+//        jika gejala 1 di centang
         if (gejala1 == 1) {
             keracunanMakanan += 1;
             diareTable += 1;
@@ -330,13 +331,13 @@ public class Kesimpulan extends AppCompatActivity {
             gastro += 1;
             rota += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala2 == 1) {
             keracunanMakanan += 1;
             diareTable += 1;
             radangUsusTable += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala3 == 1) {
             keracunanMakanan += 1;
             radangUsusTable += 1;
@@ -346,92 +347,104 @@ public class Kesimpulan extends AppCompatActivity {
             keracunanMakanan += 1;
             eColiTable += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala5 == 1) {
             keracunanMakanan += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala6 == 1) {
             keracunanMakanan += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala7 == 1) {
             keracunanMakanan += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala8 == 1) {
             diareTable += 1;
             eColiTable += 1;
             gastro += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala9 == 1) {
             diareTable += 1;
             gastro += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala10 == 1) {
             diareTable += 1;
             gastro += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala11 == 1) {
             diareTable += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala12 == 1) {
             radangUsusTable += 1;
             eColiTable += 1;
             rota += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala13 == 1) {
             radangUsusTable += 1;
             eColiTable += 1;
             gastro += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala14 == 1) {
             eColiTable += 1;
             rota += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala15 == 1) {
             eColiTable += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala16 == 1) {
             gastro += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala17 == 1) {
             gastro += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala18 == 1) {
             rota += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala19 == 1) {
             rota += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala20 == 1) {
             rota += 1;
         }
-
+//        jika gejala 1 di centang
         if (gejala21 == 1) {
             rota += 1;
         }
+
+        //proses pengecekan keracunan makanan jika positif
         if (keracunanMakanan == 7) {
+            //set tulisan di table menjadi positif
             analisakeracunanmakanan.setText("positif");
+            //perhitungan jumlah keracunan makanan
             jumlahkeracunanmakanan.setText(String.format("%.0f", keracunanMakanan) + " dari " + "7");
+            //perhitungan prosentase keracunan makanan dengan pembulatan 2 angka belakang koma
             prosentasekeracunanmakanan.setText(String.format("%.2f", keracunanMakanan / 7 * 100) + "%");
+            //tampilkan solusi keracunan makanan
             solusi_keracunan_makanan.setVisibility(View.VISIBLE);
-        } else {
+        }
+        //proses pengecekan keracunan makanan jika negatif
+        else {
+            //set tulisan di table menjadi negatif
             analisakeracunanmakanan.setText("negatif");
+            //perhitungan jumlah keracunan makanan
             jumlahkeracunanmakanan.setText(String.format("%.0f", keracunanMakanan) + " dari " + "7");
+            //perhitungan pembulatan atas prosentase keracunan makanan dengan pembulatan 2 angka belakang koma
             prosentasekeracunanmakanan.setText(String.format("%.2f", keracunanMakanan / 7 * 100) + "%");
+            //tampilkan solusi keracunan makanan
             solusi_keracunan_makanan.setVisibility(View.GONE);
         }
 
