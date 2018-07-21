@@ -28,6 +28,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="#0A1829"
-        android:text="Aplikasi ini merupakan aplikasi yang digunakan untuk melakukan diagnosa penyakit perut menggunakan metode forward chaining.Aplikasi ini terdiri dari 20 pertanyaan. Di setiap pertanyaan anda diwajibkan untuk memilih ya atau tidak. jika anda rasa sudah selesai dengan pertanyaan tersebut maka anda bisa klik selesai pada pojok kanan atas program. Otomatis anda anda diarahkan ke halaman kesimpulan. Kesimpulan penyakit akan muncul sesui dengan gejala yang anda pilih. "
+        android:text="Aplikasi ini merupakan aplikasi yang digunakan untuk
+        melakukan diagnosa penyakit perut menggunakan metode forward chaining.
+        Aplikasi ini terdiri dari 21 pertanyaan.
+        Di setiap pertanyaan anda diwajibkan untuk memilih ya atau tidak.
+        Jika anda rasa sudah selesai dengan pertanyaan tersebut maka anda bisa klik selesai pada pojok kanan atas program.
+        Otomatis anda anda diarahkan ke halaman kesimpulan.
+        Kesimpulan penyakit akan muncul sesui dengan gejala yang anda pilih. "
         />
 </LinearLayout>
